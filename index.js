@@ -166,6 +166,17 @@ app.post('/api/notice/delete/:noticeSeq', (req, res) => {
   }, 500)
 })
 
+
+app.get('/api/common/temp', (req, res) => {
+  console.log('called')
+  setTimeout(() => {
+    const result = {
+      code: '0'
+    }
+    res.send(result)
+  }, 500)
+})
+
 app.listen(8090, () => {
   console.log('Server listening on port 8090')
 })
